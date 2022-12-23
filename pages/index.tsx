@@ -1,10 +1,13 @@
 import React from "react";
+import EventList from "../components/events/EventList";
+import { getFeaturedEvents } from "../dummy-data";
 
 const index = () => {
+  const featuredEvent = getFeaturedEvents();
   return (
-    <div>
-      <h1>index page</h1>
-    </div>
+    <React.Fragment>
+      <EventList items={featuredEvent} />
+    </React.Fragment>
   );
 };
 
