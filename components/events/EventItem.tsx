@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./event-item.module.css";
 import { Event } from "../../types/events";
 import Button from "../UI/Button";
@@ -19,7 +20,7 @@ const EventItem = ({ item }: Props) => {
   const address = item.location.replace(", ", "\n");
   return (
     <li className={styles.item}>
-      <img src={"/" + item.image} alt={item.title} />
+      <Image src={"/" + item.image} alt={item.title} width={350} height={350} />
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>{item.title}</h2>

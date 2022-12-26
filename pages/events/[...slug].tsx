@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { getFilteredEvents } from "../../dummy-data";
 import EventList from "../../components/events/EventList";
 import ResultsTitle from "../../components/events/ResultsTitle";
+import SEO from "../../components/SEO";
 
 const FilteredEvents = () => {
   const router = useRouter();
@@ -28,6 +29,7 @@ const FilteredEvents = () => {
 
   return (
     <React.Fragment>
+      <SEO title="search" />
       <ResultsTitle date={date} />
       <EventList items={events} />;
     </React.Fragment>
